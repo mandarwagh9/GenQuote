@@ -196,3 +196,49 @@ h2 {
 #theme-switch:checked ~ .theme-toggle #theme-label {
     color: #f4c542; /* Adjust the text color for dark mode */
 }
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f2f5;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
+.github-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #f0f2f5;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Other styles remain unchanged... */
+
