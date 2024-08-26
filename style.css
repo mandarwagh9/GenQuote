@@ -1,19 +1,27 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #f0f2f5;
 }
 
 /* Container Styling */
@@ -25,6 +33,13 @@ body {
     text-align: center;
     width: 90%;
     max-width: 500px;
+}
+
+/* Heading Styling */
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #007bff; /* Primary color */
 }
 
 /* Quote Box Styling */
@@ -97,6 +112,7 @@ body {
 /* Favorites Section Styling */
 .favorites-section {
     margin-top: 20px;
+    text-align: left;
 }
 
 h2 {
@@ -108,6 +124,7 @@ h2 {
 #favorites-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 #favorites-list li {
@@ -122,8 +139,60 @@ h2 {
     justify-content: space-between;
     align-items: center;
     transition: transform 0.2s ease;
+    position: relative;
 }
 
 #favorites-list li:hover {
     transform: translateY(-2px);
+}
+
+#favorites-list li .trash-icon {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #e74c3c; /* Trash icon color */
+    transition: color 0.3s;
+}
+
+#favorites-list li .trash-icon:hover {
+    color: #c0392b; /* Darker red on hover */
+}
+
+/* Theme Toggle Styling */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#theme-switch {
+    display: none;
+}
+
+#theme-label {
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Light Mode Text Color */
+.light-mode #theme-label {
+    color: #007bff;
+}
+
+/* Dark Mode Text Color */
+.dark-mode #theme-label {
+    color: #f4c542;
+}
+
+/* Style for when the theme switch is toggled */
+#theme-switch:checked ~ .theme-toggle #theme-label {
+    color: #f4c542; /* Adjust the text color for dark mode */
 }
