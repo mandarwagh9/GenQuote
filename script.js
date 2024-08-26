@@ -25,7 +25,7 @@ async function getRandomQuote() {
 function tweetQuote() {
     const quote = quoteText.innerText;
     const author = authorText.innerText;
-    const watermark = " - Check out more at mandarwagh.in";  // Your promotional text
+    const watermark = "  @ generated on genquote.vercel.app";  // Your promotional text
     const tweetContent = `${quote} ${author} ${watermark}`;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetContent)}`;
     window.open(tweetUrl, '_blank');
