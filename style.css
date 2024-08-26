@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -196,19 +197,7 @@ h2 {
 #theme-switch:checked ~ .theme-toggle #theme-label {
     color: #f4c542; /* Adjust the text color for dark mode */
 }
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
+
 /* Footer Styling */
 footer {
     margin-top: 20px;
@@ -228,29 +217,3 @@ footer {
 .github-link:hover {
     text-decoration: underline;
 }
-
-/* Light Mode */
-.light-mode {
-    background-color: #f0f2f5;
-    color: #333;
-}
-
-/* Dark Mode */
-.dark-mode {
-    background-color: #333;
-    color: #f0f2f5;
-}
-
-/* Container Styling */
-.container {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-}
-
-/* Other styles remain unchanged... */
-
