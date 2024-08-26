@@ -5,6 +5,8 @@ const newQuoteBtn = document.getElementById('new-quote');
 const tweetQuoteBtn = document.getElementById('tweet-quote');
 const saveQuoteBtn = document.getElementById('save-quote');
 const favoritesList = document.getElementById('favorites-list');
+const themeSwitch = document.getElementById('theme-switch');
+const body = document.body;
 
 // Fetch a random quote from the API
 async function getRandomQuote() {
@@ -19,12 +21,11 @@ async function getRandomQuote() {
     }
 }
 
-// Tweet the current quote
 // Tweet the current quote with a watermark
 function tweetQuote() {
     const quote = quoteText.innerText;
     const author = authorText.innerText;
-    const watermark = " GenQuotes";  // Your promotional text
+    const watermark = " - Check out more at mandarwagh.in";  // Your promotional text
     const tweetContent = `${quote} ${author} ${watermark}`;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetContent)}`;
     window.open(tweetUrl, '_blank');
@@ -66,11 +67,36 @@ function removeFavorite(event) {
     displayFavorites();
 }
 
+// Toggle theme between dark and light mode
+function toggleTheme() {
+    if (themeSwitch.checked) {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light-mode');
+    }
+}
+
+// Initialize theme on page load
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
+        themeSwitch.checked = savedTheme === 'dark-mode';
+    }
+}
+
 // Event Listeners
 newQuoteBtn.addEventListener('click', getRandomQuote);
 tweetQuoteBtn.addEventListener('click', tweetQuote);
 saveQuoteBtn.addEventListener('click', saveFavorite);
+themeSwitch.addEventListener('change', toggleTheme);
 
-// Initial Load
+// Initialize page
+initTheme();
 getRandomQuote();
 displayFavorites();
+
