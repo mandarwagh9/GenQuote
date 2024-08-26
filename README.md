@@ -22,12 +22,12 @@ To get started with the Random Quote Generator, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/random-quote-generator.git
+   git clone https://github.com/yourusername/GenQuote.git
    ```
    
 2. **Navigate to the Project Directory**:
    ```bash
-   cd random-quote-generator
+   cd GenQuote
    ```
 
 3. **Open `index.html` in Your Browser**:
