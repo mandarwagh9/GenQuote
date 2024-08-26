@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Quote Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-mode">
     <div class="container">
-    <h1>Random Quote Generator</h1>
+        
         <div class="quote-box">
-           
-            <p id="quote">Click the button to generate a quote.</p>
-            <p id="author"></p>
+            <p id="quote">Click "New Quote" to get a random quote.</p>
+            <p id="author">- Author</p>
         </div>
         <div class="buttons">
             <button id="new-quote" class="btn">New Quote</button>
@@ -21,9 +19,15 @@
             <button id="save-quote" class="btn">Save Quote</button>
         </div>
         <div class="favorites-section">
-            <h2>Favorites</h2>
+            <h2>Your Favorites</h2>
             <ul id="favorites-list"></ul>
         </div>
+    </div>
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch">
+            <span id="theme-label">Light Mode</span>
+        </label>
     </div>
     <script src="script.js"></script>
 </body>
